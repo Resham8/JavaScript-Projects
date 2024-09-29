@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    background-color: #3F7CAC;
+    font-family: sans-serif;
+}
+
+.score {
+    color: #BDC4A7;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score-box {
+    padding: 10px;
+    border: 2px solid #BDC4A7; /* Matches the score text color */
+    border-radius: 8px;
+    background-color: #272D2D; /* Matches the button background color */
+    text-align: center;
+    width: 120px; /* Adjust width as needed */
+}
+
+.score-box h2 {
+    font-size: 20px;
+    color: #E2F89C; /* Matches the intro text color */
+}
+
+.score-box p {
+    margin: 5px 0;
+    font-size: 25px;
+    color: #E2F89C; /* Matches the intro text color */
+    background-color: #3F7CAC; /* Subtle background match */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.intro {
+    color: #E2F89C;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+}
+
+.intro h1 {
+    font-size: 50px;
+}
+
+.intro button,
+.match button {
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: #CFCFCD;
+    font-size: 20px;
+    background-color: #272D2D;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.match {
+    position: absolute;
+    top: 50%; /* This keeps the match section centered */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering */
+    transition: opacity 0.5s ease 0.5s;
+    padding-top: 50px; /* Add padding to create space above the winner text */
+}
+
+.winner {
+    color: #E2F89C;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px; 
+}
+
+.hands,
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Reset button container */
+.reset-button {
+    display: flex;
+    justify-content: center;
+    margin: -10px 0; /* Spacing above and below the reset button */
+}
+
+/* Reset button styling */
+#reset {
+    width: 150px; /* Set a fixed width for most screens */
+    height: 40px; /* Set a fixed height */
+    background-color: #272D2D; /* Matches other buttons */
+    color: #CFCFCD;
+    font-size: 16px; /* Use a consistent font size */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 5px 10px; /* Adds padding inside the button */
+}
+
+#reset:hover {
+    background-color: #3F7CAC; /* Hover effect */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    #reset {
+        width: 120px; /* Adjust width for smaller screens */
+        height: 35px; /* Adjust height for smaller screens */
+        font-size: 14px; /* Reduce font size */
+    }
+}
+
+
+
+.player-hand {
+    transform: rotateY(180deg);
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
