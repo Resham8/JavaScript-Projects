@@ -20,23 +20,23 @@ section {
 
 .score-box {
     padding: 10px;
-    border: 2px solid #BDC4A7; /* Matches the score text color */
+    border: 2px solid #BDC4A7; 
     border-radius: 8px;
-    background-color: #272D2D; /* Matches the button background color */
+    background-color: #272D2D; 
     text-align: center;
-    width: 120px; /* Adjust width as needed */
+    width: 120px;
 }
 
 .score-box h2 {
     font-size: 20px;
-    color: #E2F89C; /* Matches the intro text color */
+    color: #E2F89C; 
 }
 
 .score-box p {
     margin: 5px 0;
     font-size: 25px;
-    color: #E2F89C; /* Matches the intro text color */
-    background-color: #3F7CAC; /* Subtle background match */
+    color: #E2F89C; 
+    background-color: #3F7CAC; 
     padding: 5px;
     border-radius: 5px;
 }
@@ -70,11 +70,11 @@ section {
 
 .match {
     position: absolute;
-    top: 50%; /* This keeps the match section centered */
+    top: 50%; 
     left: 50%;
-    transform: translate(-50%, -50%); /* Centering */
+    transform: translate(-50%, -50%); 
     transition: opacity 0.5s ease 0.5s;
-    padding-top: 50px; /* Add padding to create space above the winner text */
+    padding-top: 50px; 
 }
 
 .winner {
@@ -95,33 +95,40 @@ section {
 .reset-button {
     display: flex;
     justify-content: center;
-    margin: -10px 0; /* Spacing above and below the reset button */
+    margin: 20px 0; 
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 10; /* Make sure the button is on top */
 }
 
-/* Reset button styling */
+.reset-button #reset {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+}
+
 #reset {
-    width: 150px; /* Set a fixed width for most screens */
-    height: 40px; /* Set a fixed height */
-    background-color: #272D2D; /* Matches other buttons */
+    width: 150px; 
+    height: 40px; 
+    background-color: #272D2D; 
     color: #CFCFCD;
-    font-size: 16px; /* Use a consistent font size */
+    font-size: 16px; 
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
     cursor: pointer;
     transition: background-color 0.3s;
-    padding: 5px 10px; /* Adds padding inside the button */
+    padding: 5px 10px; 
 }
 
 #reset:hover {
-    background-color: #3F7CAC; /* Hover effect */
+    background-color: #3F7CAC;
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 600px) {
     #reset {
-        width: 120px; /* Adjust width for smaller screens */
-        height: 35px; /* Adjust height for smaller screens */
-        font-size: 14px; /* Reduce font size */
+        width: 120px; 
+        height: 35px; 
+        font-size: 14px; 
     }
 }
 
