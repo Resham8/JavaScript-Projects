@@ -8,9 +8,13 @@ const game = () => {
         const introScreen = document.querySelector('.intro');
         const match = document.querySelector('.match');
 
-        playBtn.addEventListener("click",() => {
+        playBtn.addEventListener("click", () => {
             introScreen.classList.add("fadeOut");
             match.classList.add("fadeIn");
+
+            // Add the reset button event listener when the game starts
+            const resetBtn = document.getElementById('reset');
+            resetBtn.addEventListener('click', resetGame);
         });
     };
 
@@ -19,16 +23,16 @@ const game = () => {
         const playerHand = document.querySelector('.player-hand');
         const computerHand = document.querySelector('.computer-hand');
 
-        //Computer options
-        const computerOptions = ['rock','paper','scissors'];
-                
+        // Computer options
+        const computerOptions = ['rock', 'paper', 'scissors'];
+
         options.forEach(option => {
-            option.addEventListener('click', function() {
-                // computers choice
+            option.addEventListener('click', function () {
+                // Computer's choice
                 const computerNumber = Math.floor(Math.random() * 3);
                 const computerChoice = computerOptions[computerNumber];
-                
-                compareHands(this.textContent,computerChoice);
+
+                compareHands(this.textContent, computerChoice);
 
                 playerHand.src = `./assets/${this.textContent}.png`;
                 computerHand.src = `./assets/${computerChoice}.png`;
@@ -40,42 +44,39 @@ const game = () => {
         pScore = 0;
         cScore = 0;
         updateScore();
-        
+
         const winner = document.querySelector('.winner');
         const playerHand = document.querySelector('.player-hand');
         const computerHand = document.querySelector('.computer-hand');
-    
+
         // Reset the text and images
         winner.textContent = 'Choose an Option';
         playerHand.src = './assets/rock.png';
         computerHand.src = './assets/rock.png';
     };
-        
-    document.getElementById('reset').addEventListener('click', resetGame);
-    
 
     const updateScore = () => {
         const playerScore = document.querySelector('.player-score p');
         const computerScore = document.querySelector('.computer-score p');
         playerScore.textContent = pScore;
         computerScore.textContent = cScore;
-    }
+    };
 
     const compareHands = (playerChoice, computerChoice) => {
         const winner = document.querySelector('.winner');
-        if(playerChoice === computerChoice){
+        if (playerChoice === computerChoice) {
             winner.textContent = 'It is a Tie';
             return;
         }
 
         // rock
-        if(playerChoice === 'rock'){
-            if(computerChoice === 'scissors'){
+        if (playerChoice === 'rock') {
+            if (computerChoice === 'scissors') {
                 winner.textContent = 'Player wins';
                 pScore++;
                 updateScore();
                 return;
-            }else{
+            } else {
                 winner.textContent = 'Computer wins';
                 cScore++;
                 updateScore();
@@ -84,13 +85,13 @@ const game = () => {
         }
 
         // paper
-        if(playerChoice === 'paper'){
-            if(computerChoice === 'scissors'){
+        if (playerChoice === 'paper') {
+            if (computerChoice === 'scissors') {
                 winner.textContent = 'Computer wins';
                 cScore++;
                 updateScore();
                 return;
-            }else{
+            } else {
                 winner.textContent = 'Player wins';
                 pScore++;
                 updateScore();
@@ -98,24 +99,23 @@ const game = () => {
             }
         }
 
-        //scissors
-        if(playerChoice === 'scissors'){
-            if(computerChoice === 'rock'){
+        // scissors
+        if (playerChoice === 'scissors') {
+            if (computerChoice === 'rock') {
                 winner.textContent = 'Computer wins';
                 cScore++;
                 updateScore();
                 return;
-            }else{
+            } else {
                 winner.textContent = 'Player wins';
                 pScore++;
                 updateScore();
                 return;
             }
         }
-    }
+    };
 
     startGame();
-    playMatch(); 
+    playMatch();
 };
 game();
-
