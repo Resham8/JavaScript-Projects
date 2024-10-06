@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #00A878;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #F3C178;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #D8F1A0;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#speak-btn {
+    background-color: #4CAF50;
+}
+
+#speak-btn:hover {
+    background-color: #66bb6a;
+}
+
+#speak-btn:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#pause-btn {
+    background-color: #ff9800;
+}
+
+#pause-btn:hover {
+    background-color: #ffa726;
+}
+
+#pause-btn:active {
+    background-color: #e65100;
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#resume-btn {
+    background-color: #03A9F4;
+}
+
+#resume-btn:hover {
+    background-color: #29b6f6;
+}
+
+#resume-btn:active {
+    background-color: #0277bd;
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#stop-btn {
+    background-color: #f44336;
+}
+
+#stop-btn:hover {
+    background-color: #ef5350;
+}
+
+#stop-btn:active {
+    background-color: #d32f2f;
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.controls button:hover {
+    transform: scale(1.05);
+}
+
+.controls button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    border-color: #f44336;
+    background-color: #ffebee;
+}
+
+.error:focus {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
