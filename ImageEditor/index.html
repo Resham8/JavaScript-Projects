@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Editor</title>    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="editor-container">
+        <div class="image-container">
+          <img id="image" />
+        </div>
+        <input type="file" id="file" accept="image/*" />
+        <label for="file">Open A Photo</label>
+        <div class="options-btn hide">
+          <button id="rotate-left">
+            <i class="bi bi-arrow-counterclockwise"></i>
+          </button>
+          <button id="rotate-right">
+            <i class="bi bi-arrow-clockwise"></i>
+          </button>
+          <button id="scale-X-button">
+            <i class="bi bi-symmetry-horizontal"></i>
+          </button>
+          <button id="scale-Y-button">
+            <i class="bi bi-symmetry-vertical"></i>
+          </button>
+          <button class="aspect-ratio-btns">16:9</button>
+          <button class="aspect-ratio-btns">4:3</button>
+          <button class="aspect-ratio-btns">1:1</button>
+          <button class="aspect-ratio-btns">2:3</button>
+          <button class="aspect-ratio-btns">Free</button>
+        </div>
+        <div class="action-btns">
+          <button id="preview" class="hide">Preview</button>
+          <a href="" id="download" class="hide">Download</a>
+        </div>
+      </div>
+      <div class="preview-container">
+        <img id="preview-image" />
+      </div>
+    </div>    
+    <script src="script.js"></script>
+  </body>
+</html>
