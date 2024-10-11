@@ -1,6 +1,6 @@
 # JavaScript Projects
 
-This repository contains various JavaScript projects. Below are the demos of each project. Click the image or link to view the video demonstration.
+This repository contains various JavaScript projects. Below are the demos of some project.
 
 ---
 
