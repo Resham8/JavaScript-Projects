@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s;
+}
+body.light-theme {
+    background-color: #f0f4f8;
+}
+body.dark-theme {
+    background-color: #1e2634;
+}
+.calculator {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.dark-theme .calculator {
+    background-color: #2d3748;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a5568;
+    transition: color 0.3s;
+}
+.dark-theme .title {
+    color: #a78bfa;
+}
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fbbf24;
+}
+#display {
+    width: calc(100% - 20px);
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #edf2f7;
+    color: #2d3748;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dark-theme #display {
+    background-color: #4a5568;
+    color: #ffffff;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.number, .decimal {
+    background-color: #e2e8f0;
+    color: #2d3748;
+}
+.dark-theme .number, .dark-theme .decimal {
+    background-color: #4a5568;
+    color: #ffffff;
+}
+.operator, .equals {
+    background-color: #fbbf24;
+    color: #000000;
+    font-weight: bold;
+}
+.clear {
+    grid-column: span 4;
+    border-radius: 25px;
+    background-color: #fc8181;
+    color: #ffffff;
+}
+.dark-theme .clear {
+    background-color: #e53e3e;
+}
