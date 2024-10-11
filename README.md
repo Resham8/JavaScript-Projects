@@ -4,5 +4,5 @@ This repository contains various JavaScript projects. Below are the demos of eac
 
 ---
 
-## 1. Calculator App
-[![Calculator Demo](https://img.youtube.com/vi/US3CAjjIhBo/0.jpg)](https://youtu.be/US3CAjjIhBo)
+## 1. Cats
+https://github.com/user-attachments/assets/592bd29e-bc01-4e04-a5e3-f891bf06318e
