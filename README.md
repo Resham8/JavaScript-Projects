@@ -1,6 +1,6 @@
 # JavaScript Projects
 
-This repository contains various JavaScript projects. Below are the demos of some project.
+This repository contains various JavaScript projects. Below are the demos of some practice projects in this repo.
 
 ---
 
