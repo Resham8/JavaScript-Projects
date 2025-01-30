@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <h2>Taskify</h2>
+        <span>|</span>
+        <p>Task Management</p>
+      </div>
+      <div class="boxes">
+        <div class="box" id="inbox">
+          <div class="label">
+            <span>Inbox</span>
+            <span class="task-count">0</span>
+          </div>
+          <div class="add-new" onclick="openModal('inbox')">+ Add Task</div>
+          <div class="task-list" ondragover="allowDrop(event)" ondrop="drop(event, 'inbox')"></div>
+        </div>
+        <div class="box" id="in-progress">
+          <div class="label">
+            <span>In Progress</span>
+            <span class="task-count">0</span>
+          </div>
+          <div class="add-new" onclick="openModal('in-progress')">+ Add Task</div>
+          <div class="task-list" ondragover="allowDrop(event)" ondrop="drop(event, 'inbox')"></div>
+        </div>
+        <div class="box" id="under-view">
+          <div class="label">
+            <span>Under Review</span>
+            <span class="task-count">0</span>
+          </div>
+          <div class="add-new" onclick="openModal('under-view')">+ Add Task</div>
+          <div class="task-list" ondragover="allowDrop(event)" ondrop="drop(event, 'inbox')"></div>
+        </div>
+        <div class="box" id="done">
+          <div class="label">
+            <span>Done</span>
+            <span class="task-count">0</span>
+          </div>
+          <div class="add-new" onclick="openModal('done')">+ Add Task</div>
+          <div class="task-list" ondragover="allowDrop(event)" ondrop="drop(event, 'inbox')"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="taskModal">
+      <div class="modal-content">
+        <h3>Add New Task</h3>
+        <input type="text" id="taskTitle" placeholder="Task Title" />
+        <textarea
+          id="taskDescription"
+          placeholder="Task Description"
+          rows="3"
+        ></textarea>
+        <select id="taskPriority">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+        <div class="modal-buttons">
+          <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+          <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
